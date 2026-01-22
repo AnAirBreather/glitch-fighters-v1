@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://fuoo5frdndt0"]
+
+[ext_resource type="Script" uid="uid://ttj7tirsm43i" path="res://Menus/character_menu.gd" id="1_yo0sw"]
+
+[node name="characterMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yo0sw")
+
+[node name="BackButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="BackButton" type="Button" parent="BackButtonContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="CharacterSelectTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "Select your character"
+
+[node name="StartGameButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -40.0
+offset_right = 23.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartGameButton" type="Button" parent="StartGameButtonContainer"]
+layout_mode = 2
+text = "Start"
+
+[connection signal="pressed" from="BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="StartGameButtonContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
