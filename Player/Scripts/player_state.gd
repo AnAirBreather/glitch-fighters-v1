@@ -12,6 +12,8 @@ var jump_anim: String = "Jump"
 var fall_anim: String = "Fall"
 var light_anim: String = "Light"
 var heavy_anim: String = "Heavy"
+var pain_anim: String = "Pain"
+
 
 #States
 @export_group("States")
@@ -21,6 +23,8 @@ var heavy_anim: String = "Heavy"
 @export var fall_state: PlayerState
 @export var light_state: PlayerState
 @export var heavy_state: PlayerState
+@export var pain_state: PlayerState
+
 
 #State Variables
 var sprite_flipped: bool = false #A check to see if the sprite is flipped or not

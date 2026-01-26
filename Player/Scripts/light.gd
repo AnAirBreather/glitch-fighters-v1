@@ -3,9 +3,12 @@ extends PlayerState
 
 var has_attacked: bool #A variable to check if the player has attacked
 
+@onready var hitbox: Area2D = $HitBox
+
 func enter() -> void:
-	super()
 	has_attacked = false
+	if sprite_flipped: hitbox.scale.x = -1
+	else: hitbox.scale.x = 1
 	player.animation.play(light_anim, -1, 1.5)
 	player.animation.animation_finished.connect(func(_anim): has_attacked = true)
 
