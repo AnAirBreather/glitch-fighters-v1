@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cyfk52oy6ycok"]
+[gd_scene format=3 uid="uid://cyfk52oy6ycok"]
 
 [ext_resource type="Script" uid="uid://bs1oxqvjksqux" path="res://Player/Scripts/player.gd" id="1_3mea3"]
 [ext_resource type="Texture2D" uid="uid://f7ul6ekadf5" path="res://Player/Sprites/Idle/idle1.png" id="1_e80uo"]
@@ -466,27 +466,25 @@ size = Vector2(18, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtj8b"]
 size = Vector2(17, 43)
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=563513696 groups=["Player"]]
 script = ExtResource("1_3mea3")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=562483930]
 sprite_frames = SubResource("SpriteFrames_5ncpa")
 animation = &"Idle"
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1751157481]
 position = Vector2(-1.5, 8.5)
 shape = SubResource("RectangleShape2D_d6rpx")
 
-[node name="Animation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_3nb2p")
-}
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=711223030]
+libraries/ = SubResource("AnimationLibrary_3nb2p")
 
-[node name="State Machine" type="Node2D" parent="." node_paths=PackedStringArray("starting_state")]
+[node name="State Machine" type="Node2D" parent="." unique_id=1301487400 node_paths=PackedStringArray("starting_state")]
 script = ExtResource("16_7v5gs")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node2D" parent="State Machine" node_paths=PackedStringArray("walk_state", "jump_state", "fall_state", "light_state", "heavy_state", "pain_state")]
+[node name="Idle" type="Node2D" parent="State Machine" unique_id=883854760 node_paths=PackedStringArray("walk_state", "jump_state", "fall_state", "light_state", "heavy_state", "pain_state")]
 script = ExtResource("17_8sa4y")
 walk_state = NodePath("../Walk")
 jump_state = NodePath("../Jump")
@@ -495,7 +493,7 @@ light_state = NodePath("../Light")
 heavy_state = NodePath("../Heavy")
 pain_state = NodePath("../Pain")
 
-[node name="Walk" type="Node2D" parent="State Machine" node_paths=PackedStringArray("idle_state", "jump_state", "fall_state", "light_state", "heavy_state", "pain_state")]
+[node name="Walk" type="Node2D" parent="State Machine" unique_id=19441548 node_paths=PackedStringArray("idle_state", "jump_state", "fall_state", "light_state", "heavy_state", "pain_state")]
 script = ExtResource("18_3nb2p")
 idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
@@ -504,56 +502,56 @@ light_state = NodePath("../Light")
 heavy_state = NodePath("../Heavy")
 pain_state = NodePath("../Pain")
 
-[node name="Jump" type="Node2D" parent="State Machine" node_paths=PackedStringArray("fall_state", "pain_state")]
+[node name="Jump" type="Node2D" parent="State Machine" unique_id=1419492619 node_paths=PackedStringArray("fall_state", "pain_state")]
 script = ExtResource("23_ps8ct")
 fall_state = NodePath("../Fall")
 pain_state = NodePath("../Pain")
 
-[node name="Fall" type="Node2D" parent="State Machine" node_paths=PackedStringArray("idle_state", "walk_state")]
+[node name="Fall" type="Node2D" parent="State Machine" unique_id=627241998 node_paths=PackedStringArray("idle_state", "walk_state")]
 script = ExtResource("24_7uipr")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
 
-[node name="Light" type="Node2D" parent="State Machine" node_paths=PackedStringArray("idle_state", "walk_state")]
+[node name="Light" type="Node2D" parent="State Machine" unique_id=543989004 node_paths=PackedStringArray("idle_state", "walk_state")]
 script = ExtResource("33_xu7fl")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
 
-[node name="HitBox" type="Area2D" parent="State Machine/Light"]
+[node name="HitBox" type="Area2D" parent="State Machine/Light" unique_id=1673139088]
 script = ExtResource("34_yf47d")
 metadata/_custom_type_script = "uid://ba5dne75a4k6"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Light/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Light/HitBox" unique_id=1191650798]
 position = Vector2(28, -1)
 shape = SubResource("RectangleShape2D_ib3vm")
 disabled = true
 debug_color = Color(0.71580464, 0.4827096, 0.019856438, 0.41960785)
 
-[node name="Heavy" type="Node2D" parent="State Machine" node_paths=PackedStringArray("idle_state", "walk_state")]
+[node name="Heavy" type="Node2D" parent="State Machine" unique_id=196259315 node_paths=PackedStringArray("idle_state", "walk_state")]
 script = ExtResource("34_78fhc")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
 
-[node name="HitBox" type="Area2D" parent="State Machine/Heavy"]
+[node name="HitBox" type="Area2D" parent="State Machine/Heavy" unique_id=1223363950]
 script = ExtResource("34_yf47d")
 metadata/_custom_type_script = "uid://ba5dne75a4k6"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Heavy/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Heavy/HitBox" unique_id=1899847949]
 position = Vector2(22, 2)
 shape = SubResource("RectangleShape2D_yf47d")
 disabled = true
 debug_color = Color(0.131356, 0.6381002, 0.3128134, 0.41960785)
 
-[node name="Pain" type="Node2D" parent="State Machine" node_paths=PackedStringArray("idle_state", "walk_state")]
+[node name="Pain" type="Node2D" parent="State Machine" unique_id=2018203904 node_paths=PackedStringArray("idle_state", "walk_state")]
 script = ExtResource("38_vtj8b")
 idle_state = NodePath("../Idle")
 walk_state = NodePath("../Walk")
 
-[node name="HurtBox" type="Area2D" parent="State Machine/Pain"]
+[node name="HurtBox" type="Area2D" parent="State Machine/Pain" unique_id=208319473]
 script = ExtResource("36_jvfa1")
 metadata/_custom_type_script = "uid://vfxehvwjr620"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Pain/HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Pain/HurtBox" unique_id=2072344251]
 position = Vector2(-1.5, 8.5)
 shape = SubResource("RectangleShape2D_vtj8b")
 debug_color = Color(0.8731191, 0.18973821, 0.7190818, 0.41960785)
