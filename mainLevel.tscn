@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci8p755lsiu10"]
+[gd_scene format=3 uid="uid://ci8p755lsiu10"]
 
 [ext_resource type="Texture2D" uid="uid://csa15vrsd0nin" path="res://Level/Sprites/tileset.png" id="1_lv0yf"]
 [ext_resource type="PackedScene" uid="uid://cyfk52oy6ycok" path="res://Player/Player.tscn" id="2_yv4n1"]
@@ -554,9 +554,9 @@ size = Vector2(31, 115)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qg288"]
 size = Vector2(27, 113)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=741477502]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=1247453702]
 tile_set = SubResource("TileSet_qg288")
 format = 2
 layer_0/name = "Foreground"
@@ -569,26 +569,26 @@ layer_2/z_index = 1
 layer_3/name = "Backdrop"
 layer_3/z_index = -2
 
-[node name="Player" parent="." instance=ExtResource("2_yv4n1")]
+[node name="Player" parent="." unique_id=1365796731 instance=ExtResource("2_yv4n1")]
 position = Vector2(0, 12)
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=2084869280]
 offset = Vector2(0, 40)
 zoom = Vector2(4, 4)
 
-[node name="HurtBox" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="." unique_id=910684774]
 script = ExtResource("3_yv4n1")
 metadata/_custom_type_script = "uid://vfxehvwjr620"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1438718405]
 position = Vector2(90.5, 22.5)
 shape = SubResource("RectangleShape2D_4hor2")
 debug_color = Color(0.24037588, 0.53878015, 0.8990397, 0.41960785)
 
-[node name="HitBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="." unique_id=1960979444]
 script = ExtResource("4_4hor2")
 metadata/_custom_type_script = "uid://ba5dne75a4k6"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1900846076]
 position = Vector2(90.5, 23.5)
 shape = SubResource("RectangleShape2D_qg288")

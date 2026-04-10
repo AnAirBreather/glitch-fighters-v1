@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://nqna1j8l51bo"]
+[gd_scene format=3 uid="uid://nqna1j8l51bo"]
 
 [ext_resource type="Script" uid="uid://chdggx7gobfo3" path="res://Menus/options_menu.gd" id="1_wj6lh"]
 [ext_resource type="Script" uid="uid://3ntou2cp5fnb" path="res://Menus/fullscreen_button.gd" id="2_tmh8p"]
 
-[node name="Options" type="Control"]
+[node name="Options" type="Control" unique_id=1060717172]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wj6lh")
 
-[node name="BackButtonContainer" type="VBoxContainer" parent="."]
+[node name="BackButtonContainer" type="VBoxContainer" parent="." unique_id=51055117]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -21,11 +21,11 @@ offset_top = -40.0
 offset_right = 45.0
 grow_vertical = 0
 
-[node name="BackButton" type="Button" parent="BackButtonContainer"]
+[node name="BackButton" type="Button" parent="BackButtonContainer" unique_id=913595101]
 layout_mode = 2
 text = "Back"
 
-[node name="OptionsTitle" type="Label" parent="."]
+[node name="OptionsTitle" type="Label" parent="." unique_id=2069356954]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -37,7 +37,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 26
 text = "Options"
 
-[node name="FullscreenButton" type="CheckButton" parent="."]
+[node name="FullscreenButton" type="CheckButton" parent="." unique_id=1294428638]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
