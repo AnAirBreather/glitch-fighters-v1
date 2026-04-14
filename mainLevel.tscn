@@ -570,11 +570,11 @@ layer_3/name = "Backdrop"
 layer_3/z_index = -2
 
 [node name="Player" parent="." unique_id=1365796731 instance=ExtResource("2_yv4n1")]
-position = Vector2(0, 12)
+position = Vector2(-79, 34)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=2084869280]
-offset = Vector2(0, 40)
-zoom = Vector2(4, 4)
+offset = Vector2(0, 12)
+zoom = Vector2(5, 5)
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=910684774]
 script = ExtResource("3_yv4n1")

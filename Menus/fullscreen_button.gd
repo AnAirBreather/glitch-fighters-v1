@@ -1,8 +1,8 @@
 extends CheckButton
 
 func _ready() -> void:
-	if (DisplayServer.window_get_mode() == 3):
-		button_pressed = true
+	if (DisplayServer.window_get_mode() == 3): #Checks if the window is fullscreen
+		button_pressed = true #The switch is toggled on
 
 func _on_toggled(toggled_on: bool) -> void:
 	if toggled_on == true: #If the switch is pressed
