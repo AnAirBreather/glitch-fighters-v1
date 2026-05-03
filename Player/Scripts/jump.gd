@@ -8,15 +8,18 @@ func enter() -> void:
 	super()
 	player.velocity.y = JUMP_FORCE
 	player.animation.play(jump_anim, -1, 2)
+	print("Jumped")
 
 func exit(_new_state: State = null) -> void:
 	super(_new_state)
 	player.velocity.x = 0.0
+	print("max jump height reached")
 
 func process_input(_event: InputEvent) -> State:
 	super(_event)
 	if _event.is_action_pressed(movement_key): determine_sprite_flipped(_event.as_text())
 	if _event.is_action_released(jump_key): return fall_state
+	
 	return null
 
 func process_physics(_delta: float) -> State:

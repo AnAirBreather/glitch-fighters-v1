@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctglqbmu8vpnm"]
+[gd_scene format=3 uid="uid://ctglqbmu8vpnm"]
 
 [ext_resource type="Script" uid="uid://blyh6lvv05mt7" path="res://Menus/credits_menu.gd" id="1_8t2hi"]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" unique_id=2063414678]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8t2hi")
 
-[node name="BackButtonContainer" type="VBoxContainer" parent="."]
+[node name="BackButtonContainer" type="VBoxContainer" parent="." unique_id=2066677549]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -20,11 +20,11 @@ offset_top = -40.0
 offset_right = 45.0
 grow_vertical = 0
 
-[node name="BackButton" type="Button" parent="BackButtonContainer"]
+[node name="BackButton" type="Button" parent="BackButtonContainer" unique_id=871601954]
 layout_mode = 2
 text = "Back"
 
-[node name="CreditsBody" type="Label" parent="."]
+[node name="CreditsBody" type="Label" parent="." unique_id=1331455772]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,11 +38,11 @@ offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Me for making this lol
-Everyone who supported me in making this
-Glitch Productions for inspiring me
+@UpsideAshes for helping with programming
+Glitch Productions for inspiring me with their shows and characters
 And YOU for playing this game!"
 
-[node name="CreditsTitle" type="Label" parent="."]
+[node name="CreditsTitle" type="Label" parent="." unique_id=808231881]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

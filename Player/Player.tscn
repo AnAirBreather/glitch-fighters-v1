@@ -458,7 +458,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ib3vm"]
-size = Vector2(22, 8)
+size = Vector2(20.333336, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf47d"]
 size = Vector2(18, 8)
@@ -523,7 +523,7 @@ script = ExtResource("34_yf47d")
 metadata/_custom_type_script = "uid://ba5dne75a4k6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="State Machine/Light/HitBox" unique_id=1191650798]
-position = Vector2(28, -1)
+position = Vector2(27.166668, -1)
 shape = SubResource("RectangleShape2D_ib3vm")
 disabled = true
 debug_color = Color(0.71580464, 0.4827096, 0.019856438, 0.41960785)

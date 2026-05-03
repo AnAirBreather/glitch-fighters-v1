@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://fuoo5frdndt0"]
+[gd_scene format=3 uid="uid://fuoo5frdndt0"]
 
 [ext_resource type="Script" uid="uid://ttj7tirsm43i" path="res://Menus/character_menu.gd" id="1_yo0sw"]
 
-[node name="characterMenu" type="Control"]
+[node name="characterMenu" type="Control" unique_id=1292940740]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yo0sw")
 
-[node name="BackButtonContainer" type="VBoxContainer" parent="."]
+[node name="BackButtonContainer" type="VBoxContainer" parent="." unique_id=2006700545]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -20,11 +20,11 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 
-[node name="BackButton" type="Button" parent="BackButtonContainer"]
+[node name="BackButton" type="Button" parent="BackButtonContainer" unique_id=762572564]
 layout_mode = 2
 text = "Back"
 
-[node name="CharacterSelectTitle" type="Label" parent="."]
+[node name="CharacterSelectTitle" type="Label" parent="." unique_id=1445546139]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -36,7 +36,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 26
 text = "Select your character"
 
-[node name="StartGameButtonContainer" type="VBoxContainer" parent="."]
+[node name="StartGameButtonContainer" type="VBoxContainer" parent="." unique_id=659624646]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -49,9 +49,18 @@ offset_right = 23.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="StartGameButton" type="Button" parent="StartGameButtonContainer"]
+[node name="StartGameButton" type="Button" parent="StartGameButtonContainer" unique_id=368513875]
 layout_mode = 2
 text = "Start"
+
+[node name="ComingSoonLabel" type="Label" parent="." unique_id=44467214]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 240.0
+offset_right = 812.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 22
+text = "More characters coming soon..."
 
 [connection signal="pressed" from="BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="StartGameButtonContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
